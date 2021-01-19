@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="j.css">
+<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+        $(window).on('scroll',function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('black');
+            }
+            else{
+                $('nav').removeClass('black');
+            }
+        })
+  /*menu button onclick function*/         $(document).ready(function(){
+                $('.menu h4').click(function(){
+                    $("nav ul").toggleClass("active")
+            })
+            })
+        </script>
+    </head>
+    <style>
+        body{
+	margin: 0;
+	padding: 0;
+   
+}
+.p1 img{
+    width: 100%;
+  height: 140vh;
+
+  object-fit: cover;
+  filter: brightness(.5);
+}
+.p1 h1{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Arizonia', cursive; 
+  font-size: 80px;
+  line-height: 52px;
+  font-weight: lighter;
+  text-align: center;
+}
+.responsive-bar{
+    display: none;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    padding: 25px 0px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 1;
+}
+nav.black{
+    background: rgb(36, 35, 35);
+    height: 100px;
+    padding: 10px 0px;
+    z-index: 1;
+}
+.gallery{
+  width: 70%;
+  display: flex;
+  margin: 5% auto 0;
+  box-sizing: border-box;  
+  margin: 20px; margin-left: 15%;
+}
+.imgbox{
+    margin:0% 0%;
+    flex-grow: 1;
+    flex-basis: 
+    0;
+    transition: 0.5s;
+   
+}
+.imgbox img{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    transition: 0.6s;
+
+}
+.imgbox:hover{
+    flex-basis: 50%;
+}
+
+.gallery :hover.active{
+    flex-basis: 0;
+}
+.active{
+    flex-basis: 50%;
+}
+.imgbox:nth-child(1):hover
+{
+    flex-basis: 50%;
+}
+.box{
+    font-family: 'Raleway', sans-serif;
+  padding: 3em 5em;
+  font-size: 34px;
+  font-family:'Times New Roman', Times, serif;
+  color:rgb(8, 8, 8);
+}
+.box span{
+    font-size:65px ;
+   margin-left: 3%;
+   margin-top: 9em;
+  
+   text-transform: uppercase;
+    color:linear-gradient(#9BC90D 0%, #79A70A 100%); ;
+}
+
+.curtain {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+ 
+}
+
+.left-panel,
+.right-panel {
+  width: 50%;
+  height: 100vh;
+  float: left;
+  z-index: 2;
+  position: relative;
+  background: turquoise;
+  transition: all 1s ease-in;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: 333;
+  z-index: 1;
+  text-align: center;
+}
+
+
+  .left-panel:hover {
+    transform: translateX(-100%);
+  }
+  
+  .right-panel:hover {
+    transform: translateX(100%);
+  }
+
+
+
+
+
+nav > ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    float: right;
+}
+nav > ul > li{
+    list-style: none;
+    display: inline-block;
+}
+nav > ul > li > a:hover{
+    background: rgb(39, 39, 39);
+    color: rgb(255, 255, 255);
+}
+nav > ul > li > a{
+    color: #c4c4c4;
+    text-decoration: none;
+    text-transform: uppercase; /*for capitalisation of letters */
+    line-height: 80px;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+   
+    transition: .5s;   
+}
+nav.black > ul > li > a{
+    color: #fff;
+    line-height: 60px;
+}
+
+@media(max-width:768px){
+    .responsive-bar{
+        display: block;
+        width: 100%;
+        height: 60px;
+        background: #262626;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 5px 20px;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    
+    .responsive-bar .menu h4{
+        float: right;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    nav{
+        padding: 0;
+    }
+    nav,
+    nav.black{
+    background: #262626;
+    height: 60px;
+    padding: 0;
+    }
+    
+    nav ul{
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        background: #262626;
+        float: none;
+        display: none;
+    }
+    nav ul.active{
+        display: block;
+    }
+    nav ul li{
+        width: 100%;
+    }
+    nav ul li a{
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 30px !important;
+        color: #fff;
+        
+    }
+
+    nav > ul{
+        width: 100%;
+        display: none;
+    }
+    nav > ul > li{
+        display: block;
+        text-align: center;
+    }
+    .active{
+        display: block;
+    }
+}
+
+
+
+
+
+
+:root {
+	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+}
+nav, button, input {
+	font: 1em Hind, sans-serif;
+	line-height: 1.5em;
+}
+nav, input {
+	color: #171717;
+}
+nav, .search-bar {
+	display: flex;
+}
+
+
+.search-bar input,
+.search-btn, 
+.search-btn:before, 
+.search-btn:after {
+	transition: all 0.25s ease-out;
+}
+.search-bar input,
+.search-btn {
+	width: 3em;
+	height: 3em;
+}
+.search-bar input:invalid:not(:focus),
+.search-btn {
+	cursor: pointer;
+}
+.search-bar,
+.search-bar input:focus,
+.search-bar input:valid  {
+	width: 100%;
+}
+.search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+	outline: transparent;
+}
+.search-bar {
+	margin: auto;
+	padding: 1.5em;
+	justify-content: center;
+	max-width: 30em;
+}
+.search-bar input {
+	background: transparent;
+	border-radius: 1.5em;
+	box-shadow: 0 0 0 0.4em #aaaaaa inset;
+	padding: 0.75em;
+	transform: translate(0.5em,0.5em) scale(0.5);
+	transform-origin: 100% 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.search-bar input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.search-bar input:focus,
+.search-bar input:valid {
+	background: #fff;
+	border-radius: 0.375em 0 0 0.375em;
+	box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+	transform: scale(1);
+}
+.search-btn {
+	background: #d3d2d2;
+	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+	padding: 0.75em;
+	position: relative;
+	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+	transform-origin: 0 50%;
+}
+.search-btn:before, 
+.search-btn:after {
+	content: "";
+	display: block;
+	opacity: 0;
+	position: absolute;
+}
+.search-btn:before {
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+	top: 0.75em;
+	left: 0.65em;
+	width: 1.2em;
+	height: 1.2em;
+}
+.search-btn:after {
+	background: #f1f1f1;
+	border-radius: 0 0.25em 0.25em 0;
+	top: 51%;
+	left: 51%;
+	width: 0.75em;
+	height: 0.25em;
+	transform: translate(0.2em,0) rotate(45deg);
+	transform-origin: 0 50%;
+}
+.search-btn span {
+	display: inline-block;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+.card {
+  background-color: #222831;
+  height: 37rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.card__name {
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+
+.card__image {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 5px solid #272133;
+  margin-top: 20px;
+  box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
+}
+
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px #58cdd1;
+  color: #58afd1;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+
+.draw-border::before,
+.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0rem;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+
+.draw-border:hover {
+  color: #ffe593;
+}
+
+.draw-border:hover::before,
+.draw-border:hover::after {
+  border-color: #eb196e;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 0.75em 2em;
+  letter-spacing: 0.05rem;
+  margin: 1em;
+  width: 13rem;
+}
+
+.btn:focus {
+  outline: 2px dotted #55d7dc;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1em;
+}
+
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 0.95em;
+  left: 0.96em;
+  transition: all 265ms ease-out;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #ff003c, #c648c8);
+  transition: all 265ms ease-out;
+}
+
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #ff003c;
+  background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  font-size: 1.2em;
+}
+
+/* Active state */
+.search-bar input:focus + .search-btn,
+.search-bar input:valid + .search-btn {
+	background: #2762f3;
+	border-radius: 0 0.375em 0.375em 0;
+	transform: scale(1);
+}
+.search-bar input:focus + .search-btn:before, 
+.search-bar input:focus + .search-btn:after,
+.search-bar input:valid + .search-btn:before, 
+.search-bar input:valid + .search-btn:after {
+	opacity: 1;
+}
+.search-bar input:focus + .search-btn:hover,
+.search-bar input:valid + .search-btn:hover,
+.search-bar input:valid:not(:focus) + .search-btn:focus {
+	background: #0c48db;
+}
+.search-bar input:focus + .search-btn:active,
+.search-bar input:valid + .search-btn:active {
+	transform: translateY(1px);
+}
+.para p{
+    padding: 4% 10%;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	nav, input {
+		color: #f1f1f1;
+	}
+	
+	.search-bar input {
+		box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+	}
+	.search-bar input:focus,
+	.search-bar input:valid {
+		background: #6b6a6a;
+		box-shadow: 0 0 0 0.1em #3d3d3d inset;
+	}
+	.search-btn {
+		background: #f1f1f1;
+	}
+}
+
+
+    </style>
+<body>
+        <div class="responsive-bar">
+        <div class="logo">
+          
+            </div>
+            <div class="menu">
+            <h4>Menu</h4>
+            </div>
+        </div>
+		<nav>
+            <div class="logo">
+       
+            </div>
+         <ul><li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Contact Us</a></li> <li>
+            <form action="" class="search-bar">
+                <input type="search" name="search" pattern=".*\S.*" required>
+                <button class="search-btn" type="submit">
+                    <span>Search</span>
+                </button>
+            </form>
+         </li>
+            
+            </ul></nav>
+            
+        
+  <div class="p1">
+    <img src="u.jpg" alt="Placeholder-Image">
+   
+      <h1>A good friend is like<br>
+           a four-leaf clover:<br>
+           hard to find <br>
+           <center>&</center> 
+           lucky to have</h1>
+    
+  </div><br>
+
+
+  <div class="curtain">    
+    <div class="left-panel">
+    
+    </div>
+    
+    <div class="right-panel">
+    
+    </div>
+    
+    <div class="content">
+      <p>Woo!</p>
+    </div>
+</div>
+
+
+<div class="box">
+    
+    <p>Hi folks! <br> welcome to Little Flowers !<br>
+       
+              Join us for lots of 
+        <span 
+           class="txt-rotate"
+           data-period="2000"
+           data-rotate='[ " Fun!  :)", " exploration!  :)", " growth!  :)", " knowledge!  :)", " happy moments!  :)" ]'></span>
+         </p>
+  </div>
+  
+<div class="gallery">
+    <div class="imgbox"active>
+        <img src="3.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="2.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="dancing-dave-minion-510835_1920.jpg">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+</script>
+
+
+
+
+<div class="para">
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+</div>
+
+
+
+
+
+<div class="containers">
+  <div class="row">
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=29);"></div>
+          <h2>Image 29 </h2>
+          <div class="slide">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=34);"></div>
+          <h2>Image 34 </h2>
+          <div class="slide">
+              <p>Doloremque quisquam molestias, est laudantium vero aliquid dolorum inventore atque sint perferendis qui dolor voluptas consequuntur non.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=97);"></div>
+          <h2>Image 97 </h2>
+          <div class="slide">
+              <p>Facere illo pariatur necessitatibus fugit quo impedit, quae, corporis placeat recusandae dolor ipsa nobis!</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=233);"></div>
+          <h2>Image 233 </h2>
+          <div class="slide">
+              <p>Quam molestiae ipsa sapiente mollitia, nobis.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=113);"></div>
+          <h2>Image 113 </h2>
+          <div class="slide">
+              <p>Autem possimus perspiciatis, eaque quos repudiandae modi labore sed repellat dolorum magnam praesentium expedita esse tempore saepe nulla.</p>
+          </div>
+      </div>
+      
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=126);"></div>
+          <h2>Image 126 </h2>
+          <div class="slide">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=247);"></div>
+          <h2>Image 247 </h2>
+          <div class="slide">
+              <p>Veritatis eos similique eveniet tempora.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=2);"></div>
+          <h2>Image 2 </h2>
+          <div class="slide">
+              <p>Doloremque quisquam molestias, est laudantium vero aliquid dolorum inventore atque sint perferendis qui dolor voluptas consequuntur non.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=208);"></div>
+          <h2>Image 208 </h2>
+          <div class="slide">
+              <p>Facere illo pariatur necessitatibus fugit quo impedit, quae, corporis placeat recusandae dolor ipsa nobis!</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=216);"></div>
+          <h2>Image 216 </h2>
+          <div class="slide">
+              <p>Quam molestiae ipsa sapiente mollitia, nobis.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=242);"></div>
+          <h2>Image 242 </h2>
+          <div class="slide">
+              <p>Autem possimus perspiciatis, eaque quos repudiandae modi labore sed repellat dolorum magnam praesentium expedita esse tempore saepe nulla.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=50);"></div>
+          <h2>Image 50 </h2>
+          <div class="slide">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=292);"></div>
+          <h2>Image 292 </h2>
+          <div class="slide">
+              <p>Facere illo pariatur necessitatibus fugit quo impedit, quae, corporis placeat recusandae dolor ipsa nobis!</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=182);"></div>
+          <h2>Image 182 </h2>
+          <div class="slide">
+              <p>Quam molestiae ipsa sapiente mollitia, nobis.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=4);"></div>
+          <h2>Image 4 </h2>
+          <div class="slide">
+              <p>Autem possimus perspiciatis, eaque quos repudiandae modi labore sed repellat dolorum magnam praesentium expedita esse tempore saepe nulla.</p>
+          </div>
+      </div>
+      <div class="col">
+          <div class="photo-container" style="background-image:url(https://source.unsplash.com/600x250/?sig=3);"></div>
+          <h2>Image 3 </h2>
+          <div class="slide">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/ytP9VP86DItizVX2YNA-xTYzV09IS7rh4WexVp7eilIcfHmm74B7odbcwD5DTXmL0PF42i2wnRKSFPBHlmSjCblWHDCD2oD1oaM1CGFcSd48VBKJfsCi4bS170PKxGwji8CPmehwPw=w200-h247-no" alt="Person" class="card__image">
+      <p class="card__name">Lily-Grace Colley</p>
+      <div class="grid-container">
+  
+        <div class="grid-child-posts">
+          156 Post
+        </div>
+  
+        <div class="grid-child-followers">
+          1012 Likes
+        </div>
+  
+      </div>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+      </ul>
+      <button class="btn draw-border">Follow</button>
+      <button class="btn draw-border">Message</button>
+  
+    </div>
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/oUUiPB9sq3ACq4bUaRmo8pgvC4FUpRRrQKcGIBSOsafawZfRpF1vruFeYt6uCfL6wGDQyvOi6Ez9Bpf1Fb7APKjIyVsft7FLGR6QqdRFTiceNQBm1In9aZyrXp33cZi9pUNqjHASdA=s170-no" alt="Person" class="card__image">
+      <p class="card__name">Murray Reeve</p>
+      <div class="grid-container">
+  
+        <div class="grid-child-posts">
+          305 Post
+        </div>
+  
+        <div class="grid-child-followers">
+          2643 Likes
+        </div>
+  
+      </div>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+      </ul>
+      <button class="btn draw-border">Follow</button>
+      <button class="btn draw-border">Message</button>
+    </div>
+    <div class="card">
+      <img src="https://lh3.googleusercontent.com/pZwZJ5HIL5iKbA91UGMUIPR0VJWa3K0vOGzDZmY6wU3EJBUdfsby3VEyxU162XxTyOyP3D154tjkr-4Jgcx8lygYUR8eB-jVmld4dsHi1c-mE_A8jKccseAG7bdEwVrcuuk6ciNtSw=s170-no" alt="Person" class="card__image">
+      <p class="card__name">Bianca Serrano</p>
+      <div class="grid-container">
+  
+        <div class="grid-child-posts">
+          902 Post
+        </div>
+  
+        <div class="grid-child-followers">
+          1300 Likes
+        </div>
+  
+      </div>
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+      </ul>
+      <button class="btn draw-border">Follow</button>
+      <button class="btn draw-border">Message</button>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+	</body>
