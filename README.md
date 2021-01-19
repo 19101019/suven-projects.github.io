@@ -4,13 +4,10 @@ under the internship program of suven consultants and technology , I completed t
 
           #INTERNSHIP PROGRAM :-  UI/UX (Html5 + CSS3) Coding Internship {2 Weeks (70 hrs)}
 
-Coding Front-end of 365 Entertainment similar to www.hotstar.com
-Coding Front-end of Blogging similar to www.medium.com
-Designing template using CSS3 animations
-Coding Front-end of Voter Registration similar to National Voter Service Portal Form 6
+Here you can see glimpses of one of my project :)
 
+![g1](https://user-images.githubusercontent.com/73931975/105002907-fb515c80-5a57-11eb-99d4-f7300cc2967f.png)
+![g3](https://user-images.githubusercontent.com/73931975/105002937-02786a80-5a58-11eb-95e6-ffa85c1faa8b.png)
+![g4](https://user-images.githubusercontent.com/73931975/105002943-060bf180-5a58-11eb-9662-ff125eeef39e.png)
+![g2](https://user-images.githubusercontent.com/73931975/105002945-060bf180-5a58-11eb-99ac-c259da9b81ac.png)
 
-
-Here you can see one of my project .
-
-under the following  instructions :-     In this simple project, you’ll be breaking apart some of the popular CSS3 design modules. The goal for this exercise is to start training yourself to think in terms of visual hierarchy, typography and design principles. Your job is to create a website that includes the modules described in the documentation. 
